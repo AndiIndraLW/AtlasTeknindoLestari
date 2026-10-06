@@ -1,0 +1,49 @@
+===============================================================================
+PT. ATLAS TEKNINDO LESTARI - SPACING & STYLING RULES SPECIFICATION (LIGHT MODE)
+===============================================================================
+
+1. COLOR SYSTEM (MODERN INDUSTRIAL LIGHT MODE PALETTE)
+-------------------------------------------------------------------------------
+--color-safety-yellow: #FFB800;        /* High-visibility primary industrial yellow */
+--color-safety-yellow-hover: #E0A200;  /* Darker hover amber */
+--color-safety-yellow-light: #FEF3C7;  /* Light amber highlight tint */
+--color-safety-amber-dark: #D97706;    /* Deep amber for text accents in light mode */
+
+--color-bg-main: #F8FAFC;              /* Main crisp slate-50 light background */
+--color-bg-surface: #FFFFFF;           /* Card & container clean white background */
+--color-bg-alt: #F1F5F9;               /* Alternate section background slate-100 */
+
+--color-border-light: #E2E8F0;         /* Soft container border slate-200 */
+--color-border-medium: #CBD5E1;        /* Form input border slate-300 */
+
+--color-charcoal-dark: #0F141C;        /* Header top bar & primary heading text */
+--color-text-main: #0F172A;            /* Crisp slate-900 body copy */
+--color-text-muted: #64748B;           /* Subtitle & secondary label slate-500 */
+
+--color-whatsapp-green: #25D366;        /* WhatsApp CTA brand green */
+
+2. TYPOGRAPHY SYSTEM
+-------------------------------------------------------------------------------
+Headline Font Family: 'Barlow Condensed', 'Oswald', 'Arial Black', sans-serif;
+  - Font Weight: 700 / 800 (Bold / Extra Bold)
+  - Letter Spacing: tracking-wide (0.05em)
+  - Text Transform: Uppercase for section titles & hero headlines
+
+Body Font Family: 'Inter', system-ui, -apple-system, sans-serif;
+  - Font Weight: 400 (Regular), 500 (Medium), 600 (Semi-Bold)
+  - Line Height: 1.625 (relaxed)
+
+3. SPACING & PADDING SYSTEM
+-------------------------------------------------------------------------------
+- Section Vertical Padding: 5rem (80px) on mobile, 7rem (112px) on desktop
+- Card Inner Padding: 1.5rem (24px) to 2rem (32px)
+- Input Field Height: 3.25rem (52px) with 1rem (16px) horizontal padding
+- Button Padding: 0.875rem (14px) vertical, 1.75rem (28px) horizontal
+- Card Border Radius: 0.75rem (12px) for cards, 0.5rem (8px) for buttons/inputs
+
+4. INDUSTRIAL LIGHT DECORATIVE MOTIFS & ELEVATION
+-------------------------------------------------------------------------------
+- Top Hazard Accent: 4px safety-yellow edge on headers/cards
+- Subtle Tech Mesh: Crisp light grid pattern (1px slate-200)
+- Light Shadow Elevation: 0 10px 25px -5px rgba(15, 23, 42, 0.08) for cards
+- Hover Effects: translateY(-4px), transition 0.25s ease, border-color safety-yellow glow
