@@ -13,36 +13,41 @@ export default function HeroSection() {
           
           {/* Main Commanding Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight uppercase font-heading text-slate-900 leading-[1.08] text-left">
-            HEAVY LIFTING SOLUTIONS <br className="hidden sm:inline" />
-            <span className="text-[#D97706]">FOR ANY SCALE</span>
+            SOLUSI HEAVY LIFTING <br className="hidden sm:inline" />
+            <span className="text-[#D97706]">UNTUK BERBAGAI SKALA</span>
           </h1>
 
           {/* Brief Subheadline */}
           <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed text-left max-w-2xl">
-            Indonesia&apos;s trusted heavy equipment rental partner. Rent high-tonnage mobile cranes, industrial forklifts, boom lifts, and scissor lifts with certified SIO operators and 24/7 on-site support.
+            Mitra sewa alat berat terpercaya di Indonesia. Menyediakan sewa mobile crane tonase tinggi, forklift industri, boom lift, dan scissor lift dengan operator tersertifikasi SIO dan dukungan teknis 24/7 di lokasi.
           </p>
 
           {/* Action CTAs */}
           <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-            <a href="#quote-form" className="btn-yellow text-base px-8 py-4 text-center">
-              <span>Request a Quote</span>
+            <a 
+              href="https://wa.me/6288888888888?text=Halo%20PT.%20Atlas%20Teknindo%20Lestari%2C%20saya%20berminat%20untuk%20bertanya%20mengenai%20sewa%20alat%20berat." 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn-yellow text-base px-8 py-4 text-center"
+            >
+              <span>Hubungi Hotline Langsung</span>
               <ArrowRight className="w-5 h-5" />
             </a>
             <a href="#fleet" className="btn-outline text-base px-8 py-4 text-center">
-              <span>Explore Equipment Fleet</span>
+              <span>Jelajahi Armada Alat Berat</span>
             </a>
           </div>
 
           {/* Key Bullet Highlights */}
           <div className="flex flex-wrap gap-y-2 gap-x-6 text-xs sm:text-sm text-slate-700 font-semibold pt-1">
             <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-[#D97706] shrink-0" /> 100% Certified K3 Operators
+              <CheckCircle2 className="w-4 h-4 text-[#D97706] shrink-0" /> 100% Operator Tersertifikasi K3
             </span>
             <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-[#D97706] shrink-0" /> Daily, Weekly & Monthly Contracts
+              <CheckCircle2 className="w-4 h-4 text-[#D97706] shrink-0" /> Kontrak Harian, Mingguan & Bulanan
             </span>
             <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-[#D97706] shrink-0" /> Nationwide Rapid Mobilization
+              <CheckCircle2 className="w-4 h-4 text-[#D97706] shrink-0" /> Mobilisasi Cepat Seluruh Indonesia
             </span>
           </div>
 
@@ -53,26 +58,26 @@ export default function HeroSection() {
                 
                 <div className="p-4 text-center">
                   <div className="text-2xl sm:text-3xl font-black font-heading text-slate-900">500+</div>
-                  <div className="text-[11px] uppercase font-bold text-[#D97706] tracking-wider mt-0.5">Fleet Heavy Units</div>
-                  <div className="text-[10px] text-slate-500 mt-0.5">Cranes, Forklifts & Lifts</div>
+                  <div className="text-[11px] uppercase font-bold text-[#D97706] tracking-wider mt-0.5">Unit Alat Berat</div>
+                  <div className="text-[10px] text-slate-500 mt-0.5">Crane, Forklift & Lift</div>
                 </div>
 
                 <div className="p-4 text-center">
                   <div className="text-2xl sm:text-3xl font-black font-heading text-slate-900">99.8%</div>
-                  <div className="text-[11px] uppercase font-bold text-[#D97706] tracking-wider mt-0.5">Operational Readiness</div>
-                  <div className="text-[10px] text-slate-500 mt-0.5">Strict Maintenance</div>
+                  <div className="text-[11px] uppercase font-bold text-[#D97706] tracking-wider mt-0.5">Kesiapan Operasional</div>
+                  <div className="text-[10px] text-slate-500 mt-0.5">Perawatan Ketat</div>
                 </div>
 
                 <div className="p-4 text-center">
-                  <div className="text-2xl sm:text-3xl font-black font-heading text-slate-900">15+ YRS</div>
-                  <div className="text-[11px] uppercase font-bold text-[#D97706] tracking-wider mt-0.5">Industry Leadership</div>
-                  <div className="text-[10px] text-slate-500 mt-0.5">Mining, Ports & Infra</div>
+                  <div className="text-2xl sm:text-3xl font-black font-heading text-slate-900">15+ THN</div>
+                  <div className="text-[11px] uppercase font-bold text-[#D97706] tracking-wider mt-0.5">Pengalaman Industri</div>
+                  <div className="text-[10px] text-slate-500 mt-0.5">Tambang, Pelabuhan & Infra</div>
                 </div>
 
                 <div className="p-4 text-center">
                   <div className="text-2xl sm:text-3xl font-black font-heading text-slate-900">24/7</div>
-                  <div className="text-[11px] uppercase font-bold text-[#D97706] tracking-wider mt-0.5">On-Site Dispatch</div>
-                  <div className="text-[10px] text-slate-500 mt-0.5">Mobile Engineers</div>
+                  <div className="text-[11px] uppercase font-bold text-[#D97706] tracking-wider mt-0.5">Dukungan di Lokasi</div>
+                  <div className="text-[10px] text-slate-500 mt-0.5">Teknisi Siaga</div>
                 </div>
 
               </div>

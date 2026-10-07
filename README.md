@@ -1,42 +1,44 @@
-# PT Atlas Teknindo Lestari - Company Profile Website
+# PT Atlas Teknindo Lestari - Situs Web Profil Perusahaan
 
-A Next.js (App Router) project built with TypeScript, Tailwind CSS, and Lucide React icons.
+Proyek Next.js (App Router) yang dibangun dengan TypeScript, Tailwind CSS, dan Lucide React icons.
 
-## Project Structure
+## Struktur Proyek
 
 ```
 ├── src/
 │   ├── app/
-│   │   ├── about/          # About Us page
-│   │   ├── contact/        # Contact page
-│   │   ├── services/       # Services page
-│   │   ├── globals.css     # Global styles & Tailwind imports
-│   │   ├── layout.tsx      # Root layout with header & footer
-│   │   └── page.tsx        # Homepage placeholder
+│   │   ├── about/          # Halaman Tentang Kami
+│   │   ├── contact/        # Halaman Kontak
+│   │   ├── services/       # Halaman Layanan Kami
+│   │   ├── globals.css     # Gaya global & impor Tailwind
+│   │   ├── layout.tsx      # Layout utama dengan header & footer
+│   │   └── page.tsx        # Halaman Beranda Utama
 │   └── components/
-│       ├── Navbar.tsx      # Navigation header
-│       └── Footer.tsx      # Footer component
-├── public/                 # Static assets (images, icons)
-├── package.json            # Project dependencies & scripts
-├── tailwind.config.ts      # Tailwind CSS configuration
-├── tsconfig.json           # TypeScript configuration
-└── next.config.mjs         # Next.js configuration
+│       ├── Navbar.tsx      # Navigasi utama
+│       ├── HeroSection.tsx # Seksi Hero utama
+│       ├── FleetSection.tsx # Seksi daftar armada
+│       ├── WhyChooseUsSection.tsx # Seksi keunggulan perusahaan
+│       ├── RentalEstimatorSection.tsx # Seksi kalkulator estimasi sewa
+│       ├── FloatingWhatsApp.tsx # Tombol melayang WhatsApp
+│       └── Footer.tsx      # Footer situs
+├── public/                 # Aset statis (gambar, ikon)
+├── package.json            # Dependensi & skrip proyek
+├── tailwind.config.ts      # Konfigurasi Tailwind CSS
+├── tsconfig.json           # Konfigurasi TypeScript
+└── next.config.mjs         # Konfigurasi Next.js
 ```
 
-## Getting Started
+## Memulai Proyek
 
-1. Install dependencies:
+1. Install dependensi:
    ```bash
    npm install
    ```
 
-2. Run development server:
+2. Jalankan server pengembangan:
    ```bash
    npm run dev
    ```
 
-3. Open [http://localhost:3000](http://localhost:3000) with your browser.
+3. Buka [http://localhost:3000](http://localhost:3000) pada peramban Anda.
 
-## Status
-
-> **Note:** The core Next.js architecture, routing, TypeScript, and styling pipeline are set up. Waiting for the reference design to implement customized UI components, colors, and layout aesthetics.

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ShieldCheck, Gauge, Check, ArrowRight } from 'lucide-react';
+import { Gauge, Check, ArrowRight } from 'lucide-react';
 
 interface EquipmentItem {
   id: string;
@@ -11,6 +11,7 @@ interface EquipmentItem {
   capacity: string;
   reach: string;
   power: string;
+  seriesNumber: string;
   idealFor: string;
   features: string[];
 }
@@ -19,68 +20,74 @@ const fleetData: EquipmentItem[] = [
   {
     id: 'mobile-crane',
     category: 'cranes',
-    name: 'All-Terrain Mobile Cranes',
-    badge: 'High Tonnage',
+    name: 'Mobile Crane All-Terrain',
+    badge: 'Tonase Tinggi',
     capacity: '25 Ton – 250 Ton',
-    reach: 'Up to 80m Main Boom',
+    reach: 'Main Boom hingga 80m',
     power: 'Turbo Diesel 4x4 / 8x8',
-    idealFor: 'Infrastructure, Steel Erection & Heavy Plant Assembly',
-    features: ['SIO Certified Operator Included', 'Hydraulic Jib Extension', 'Computerized Load Indicator (LMI)'],
+    seriesNumber: 'ATL-CR250-AT',
+    idealFor: 'Infrastruktur, Ereksi Baja & Perakitan Pabrik Berat',
+    features: ['Termasuk Operator Tersertifikasi SIO', 'Ekstensi Jib Hidrolik', 'Indikator Beban Komputerisasi (LMI)'],
   },
   {
     id: 'heavy-forklift',
     category: 'forklifts',
-    name: 'Heavy Industrial Forklifts',
-    badge: 'Heavy Material',
+    name: 'Forklift Industri Heavy Duty',
+    badge: 'Material Berat',
     capacity: '3 Ton – 32 Ton',
-    reach: '3m – 6m Duplex/Triplex Mast',
+    reach: 'Mast Duplex/Triplex 3m – 6m',
     power: 'Isuzu / Cummins Heavy Diesel',
-    idealFor: 'Warehouses, Steel Mills & Factory Logistics',
-    features: ['Side Shifter & Fork Positioner', 'Non-Marking Solid Tires Available', 'Heavy Counterweight Balance'],
+    seriesNumber: 'ATL-FL320-HD',
+    idealFor: 'Pergudangan, Pabrik Baja & Logistik Pabrik',
+    features: ['Side Shifter & Fork Positioner', 'Tersedia Ban Mati (Solid Non-Marking)', 'Penyeimbang Counterweight Berat'],
   },
   {
     id: 'articulating-boomlift',
     category: 'boomlifts',
-    name: 'Articulating & Telescopic Boom Lifts',
-    badge: 'High Altitude',
-    capacity: '230kg – 450kg Basket Cap',
-    reach: '16m – 43m Working Height',
-    power: '4x4 Diesel / Electric Hybrid',
-    idealFor: 'High-Altitude Piping, Maintenance & Construction',
-    features: ['360° Continuous Turntable Rotation', 'Rough Terrain Foam-Filled Tires', 'Zero Tailswing Models'],
+    name: 'Boom Lift Articulating & Telescopic',
+    badge: 'Akses Ketinggian',
+    capacity: 'Kapasitas Keranjang 230kg – 450kg',
+    reach: 'Ketinggian Kerja 16m – 43m',
+    power: '4x4 Diesel / Hibrida Elektrik',
+    seriesNumber: 'ATL-BL430-RT',
+    idealFor: 'Pekerjaan Pipa Ketinggian, Perawatan & Konstruksi',
+    features: ['Rotasi Turntable Kontinu 360°', 'Ban Foam-Filled Medan Kasar', 'Model Zero Tailswing'],
   },
   {
     id: 'scissor-lift',
     category: 'scissorlifts',
-    name: 'Electric & Rough-Terrain Scissor Lifts',
-    badge: 'Aerial Access',
-    capacity: '350kg – 680kg Large Platform',
-    reach: '8m – 18m Working Height',
-    power: 'Battery Electric / 4x4 Diesel',
-    idealFor: 'Indoor Facility Overhead Work & Exterior Cladding',
-    features: ['Roll-Out Extension Deck', 'Proportional Drive & Lift Controls', 'Automatic Pothole Protection'],
+    name: 'Scissor Lift Elektrik & Medan Kasar',
+    badge: 'Akses Elevasi',
+    capacity: 'Platform Luas 350kg – 680kg',
+    reach: 'Ketinggian Kerja 8m – 18m',
+    power: 'Baterai Elektrik / 4x4 Diesel',
+    seriesNumber: 'ATL-SL180-E',
+    idealFor: 'Pekerjaan Plafon Dalam Ruangan & Fasad Luar Gedung',
+    features: ['Deck Ekstensi Roll-Out', 'Kontrol Kemudi & Angkat Proporsional', 'Perlindungan Lubang (Pothole) Otomatis'],
   },
   {
     id: 'reach-stacker',
     category: 'stackers',
-    name: 'Heavy Reach Stackers & Port Handlers',
-    badge: 'Port Logistics',
-    capacity: '45 Ton Lifting Cap',
-    reach: '5-High Container Stacking',
+    name: 'Reach Stacker Heavy Duty & Port Handler',
+    badge: 'Logistik Pelabuhan',
+    capacity: 'Kapasitas Angkat 45 Ton',
+    reach: 'Penumpukan Kontainer Hingga 5 Tingkat',
     power: 'Volvo / Cummins Tier 3 Diesel',
-    idealFor: 'Port Terminals, Intermodal Yards & Heavy Freight Hubs',
-    features: ['Automatic Spreader Lock', 'Load Weight Measuring System', 'Comfort Ergonomic Operator Cabin'],
+    seriesNumber: 'ATL-RS450-PH',
+    idealFor: 'Terminal Pelabuhan, Depo Kontainer & Hub Kargo Berat',
+    features: ['Kunci Spreader Otomatis', 'Sistem Penimbangan Beban', 'Kabin Operator Ergonomis'],
   },
   {
     id: 'crawler-crane',
     category: 'cranes',
-    name: 'Heavy Crawler Cranes',
-    badge: 'Rough Terrain',
+    name: 'Crawler Crane Heavy Duty',
+    badge: 'Medan Ekstrem',
     capacity: '50 Ton – 150 Ton',
-    reach: 'Up to 64m Lattice Boom',
-    power: 'Heavy Tracked Crawler Chassis',
-    idealFor: 'Soft Soil Groundwork, Bridge Construction & Mining',
-    features: ['High Ground Clearance Tracks', 'Heavy Duty Hoisting Winch', '360° Load Swing Radius'],
+    reach: 'Lattice Boom hingga 64m',
+    power: 'Chassis Crawler Rantai Berat',
+    seriesNumber: 'ATL-CC150-HD',
+    idealFor: 'Pekerjaan Tanah Lunak, Konstruksi Jembatan & Pertambangan',
+    features: ['Track dengan Ground Clearance Tinggi', 'Winch Pengangkat Heavy Duty', 'Radius Putar Beban 360°'],
   },
 ];
 
@@ -99,22 +106,22 @@ export default function FleetSection() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
             <h2 className="text-3xl sm:text-5xl font-extrabold uppercase font-heading text-slate-900 tracking-wide">
-              OUR HEAVY EQUIPMENT <span className="text-[#D97706]">FLEET</span>
+              ARMADA ALAT BERAT <span className="text-[#D97706]">KAMI</span>
             </h2>
             <p className="text-slate-600 text-base max-w-2xl mt-2">
-              Rigorously maintained equipment compliant with K3 safety standards. Available for daily, monthly, or long-term project contracts.
+              Peralatan yang dirawat secara ketat dan memenuhi standar keselamatan K3. Tersedia untuk kontrak proyek harian, bulanan, maupun jangka panjang.
             </p>
           </div>
 
           {/* Fleet Filter Tabs */}
           <div className="flex flex-wrap gap-2">
             {[
-              { id: 'all', label: 'All Fleet' },
-              { id: 'cranes', label: 'Cranes' },
-              { id: 'forklifts', label: 'Forklifts' },
-              { id: 'boomlifts', label: 'Boom Lifts' },
-              { id: 'scissorlifts', label: 'Scissor Lifts' },
-              { id: 'stackers', label: 'Reach Stackers' },
+              { id: 'all', label: 'Semua Armada' },
+              { id: 'cranes', label: 'Mobile Crane' },
+              { id: 'forklifts', label: 'Forklift' },
+              { id: 'boomlifts', label: 'Boom Lift' },
+              { id: 'scissorlifts', label: 'Scissor Lift' },
+              { id: 'stackers', label: 'Reach Stacker' },
             ].map(tab => (
               <button
                 key={tab.id}
@@ -142,9 +149,6 @@ export default function FleetSection() {
                   <span className="px-2.5 py-1 rounded bg-amber-50 border border-amber-200 text-[#D97706] text-[11px] font-bold uppercase tracking-wider">
                     {item.badge}
                   </span>
-                  <span className="text-xs font-semibold text-slate-500 flex items-center gap-1">
-                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> Inspected
-                  </span>
                 </div>
 
                 <h3 className="text-xl font-bold uppercase font-heading text-slate-900 tracking-wide group-hover:text-[#D97706] transition-colors">
@@ -158,22 +162,26 @@ export default function FleetSection() {
               {/* Specification Table */}
               <div className="px-6 py-3 bg-[#F8FAFC] border-y border-slate-200 space-y-2 text-xs">
                 <div className="flex justify-between items-center">
-                  <span className="text-slate-500">Lifting Capacity:</span>
+                  <span className="text-slate-500">Kapasitas Angkat:</span>
                   <span className="font-bold text-slate-900 font-mono">{item.capacity}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-slate-500">Reach / Mast:</span>
+                  <span className="text-slate-500">Jangkauan / Mast:</span>
                   <span className="font-semibold text-slate-700">{item.reach}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-slate-500">Engine / Power:</span>
+                  <span className="text-slate-500">Mesin / Daya:</span>
                   <span className="font-semibold text-slate-700">{item.power}</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-slate-500">Nomor Seri:</span>
+                  <span className="font-bold text-slate-900 font-mono">{item.seriesNumber}</span>
                 </div>
               </div>
 
               {/* Feature Highlights */}
               <div className="p-6 pt-4 space-y-2 flex-grow">
-                <div className="text-[11px] uppercase font-bold text-slate-400 tracking-wider mb-2">Key Unit Advantages</div>
+                <div className="text-[11px] uppercase font-bold text-slate-400 tracking-wider mb-2">Keunggulan Utama Unit</div>
                 {item.features.map((feat, idx) => (
                   <div key={idx} className="flex items-center gap-2 text-xs text-slate-700">
                     <Check className="w-3.5 h-3.5 text-[#D97706] shrink-0" />
@@ -185,10 +193,12 @@ export default function FleetSection() {
               {/* Card Footer Action */}
               <div className="p-6 pt-0">
                 <a
-                  href={`#quote-form`}
+                  href={`https://wa.me/6288888888888?text=Halo%20PT.%20Atlas%20Teknindo%20Lestari%2C%20saya%20tertarik%20untuk%20bertanya%20mengenai%20penyewaan%20${encodeURIComponent(item.name)}.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full btn-outline py-2.5 text-xs flex justify-center items-center gap-2 hover:bg-[#FFB800] hover:text-[#0F141C] hover:border-[#FFB800]"
                 >
-                  <span>Book This Category</span>
+                  <span>Sewa Kategori Ini</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </a>
               </div>
@@ -204,12 +214,17 @@ export default function FleetSection() {
               <Gauge className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-lg font-bold text-slate-900 font-heading uppercase">Custom Tonnage or Special Machinery Required?</h4>
-              <p className="text-xs text-slate-600 mt-0.5">We source specialized heavy transport, modular trailers, and custom rigging configurations upon request.</p>
+              <h4 className="text-lg font-bold text-slate-900 font-heading uppercase">Butuh Tonase Khusus atau Mesin Spesialis?</h4>
+              <p className="text-xs text-slate-600 mt-0.5">Kami menyediakan transportasi alat berat khusus, trailer modular, dan konfigurasi rigging kustom sesuai kebutuhan Anda.</p>
             </div>
           </div>
-          <a href="#quote-form" className="btn-yellow text-xs py-3 px-6 shrink-0">
-            Consult Heavy Specialist
+          <a 
+            href="https://wa.me/6288888888888?text=Halo%20PT.%20Atlas%20Teknindo%20Lestari%2C%20saya%20tertarik%20dengan%20tonase%20khusus%20atau%20mesin%20spesialis."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-yellow text-xs py-3 px-6 shrink-0"
+          >
+            Konsultasi dengan Spesialis
           </a>
         </div>
 

@@ -14,7 +14,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-6">
             <span className="text-slate-400">
-              MIGAS & K3 Safety Certified Operations Across Indonesia
+              Operasional Berstandar Keselamatan MIGAS & K3 di Seluruh Indonesia
             </span>
           </div>
           <div className="flex items-center gap-4">
@@ -41,7 +41,7 @@ export default function Navbar() {
               ATLAS <span className="text-[#D97706]">TEKNINDO</span> LESTARI
             </span>
             <span className="text-[10px] tracking-widest text-slate-500 font-semibold uppercase mt-0.5">
-              PT. Heavy Lifting & Equipment Rental
+              PT. Sewa Alat Berat & Heavy Lifting
             </span>
           </div>
         </Link>
@@ -49,26 +49,36 @@ export default function Navbar() {
         {/* Desktop Nav Links */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide uppercase font-heading text-slate-700">
           <a href="#hero" className="hover:text-[#D97706] transition-colors py-2">
-            Home
+            Beranda
           </a>
           <a href="#fleet" className="hover:text-[#D97706] transition-colors py-2">
-            Our Fleet
+            Armada Kami
           </a>
           <a href="#why-us" className="hover:text-[#D97706] transition-colors py-2">
-            Why Choose Us
+            Keunggulan Kami
           </a>
           <a href="#estimator" className="hover:text-[#D97706] transition-colors py-2">
-            Rental Estimator
+            Kalkulator Sewa
           </a>
-          <a href="#quote-form" className="hover:text-[#D97706] transition-colors py-2">
-            Contact Us
+          <a 
+            href="https://wa.me/6288888888888?text=Halo%20PT.%20Atlas%20Teknindo%20Lestari%2C%20saya%20berminat%20untuk%20bertanya%20mengenai%20sewa%20alat%20berat." 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hover:text-[#D97706] transition-colors py-2"
+          >
+            Hubungi Kami
           </a>
         </nav>
 
         {/* CTA Button */}
         <div className="hidden lg:flex items-center gap-4">
-          <a href="#quote-form" className="btn-yellow text-xs px-5 py-3">
-            <span>Request a Quote</span>
+          <a 
+            href="https://wa.me/6288888888888?text=Halo%20PT.%20Atlas%20Teknindo%20Lestari%2C%20saya%20berminat%20untuk%20bertanya%20mengenai%20sewa%20alat%20berat." 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn-yellow text-xs px-5 py-3"
+          >
+            <span>Hotline Kontak</span>
             <ChevronRight className="w-4 h-4" />
           </a>
         </div>
@@ -91,43 +101,47 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(false)}
             className="block py-2 hover:text-[#D97706] border-b border-slate-100"
           >
-            Home
+            Beranda
           </a>
           <a
             href="#fleet"
             onClick={() => setMobileMenuOpen(false)}
             className="block py-2 hover:text-[#D97706] border-b border-slate-100"
           >
-            Our Fleet
+            Armada Kami
           </a>
           <a
             href="#why-us"
             onClick={() => setMobileMenuOpen(false)}
             className="block py-2 hover:text-[#D97706] border-b border-slate-100"
           >
-            Why Choose Us
+            Keunggulan Kami
           </a>
           <a
             href="#estimator"
             onClick={() => setMobileMenuOpen(false)}
             className="block py-2 hover:text-[#D97706] border-b border-slate-100"
           >
-            Rental Estimator
+            Kalkulator Sewa
           </a>
           <a
-            href="#quote-form"
+            href="https://wa.me/6288888888888?text=Halo%20PT.%20Atlas%20Teknindo%20Lestari%2C%20saya%20berminat%20untuk%20bertanya%20mengenai%20sewa%20alat%20berat."
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMobileMenuOpen(false)}
             className="block py-2 hover:text-[#D97706] border-b border-slate-100"
           >
-            Contact & Quote Form
+            Hubungi Kami
           </a>
           <div className="pt-2">
             <a
-              href="#quote-form"
+              href="https://wa.me/6288888888888?text=Halo%20PT.%20Atlas%20Teknindo%20Lestari%2C%20saya%20berminat%20untuk%20bertanya%20mengenai%20sewa%20alat%20berat."
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
               className="btn-yellow w-full py-3 text-center text-sm"
             >
-              Request Equipment Quote
+              Hotline Kontak
             </a>
           </div>
         </div>

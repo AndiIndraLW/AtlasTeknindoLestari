@@ -19,8 +19,8 @@ export default function Home() {
       {/* 4. Interactive Equipment Estimator */}
       <RentalEstimatorSection />
 
-      {/* 5. Lead Generation Section (Quote Form) */}
-      <QuoteFormSection />
+      {/* 5. Lead Generation Section (Quote Form) - Hidden */}
+      {/* <QuoteFormSection /> */}
     </div>
   );
 }

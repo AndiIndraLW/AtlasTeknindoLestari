@@ -13,35 +13,24 @@ export default function RentalEstimatorSection() {
   const getRecommendation = () => {
     if (equipmentType === 'crane') {
       if (tonnage <= 35) return 'Tadano / Kato 25T - 35T All-Terrain Mobile Crane';
-      if (tonnage <= 80) return 'Liebherr / Kato 50T - 80T Hydraulic Crane with 45m Boom';
-      return 'Sany / Liebherr 100T - 250T Heavy All-Terrain Crane with Heavy Fly Jib';
+      if (tonnage <= 80) return 'Liebherr / Kato 50T - 80T Crane Hidrolik dengan Jib 45m';
+      return 'Sany / Liebherr 100T - 250T Heavy All-Terrain Crane dengan Fly Jib Berat';
     } else if (equipmentType === 'forklift') {
-      if (tonnage <= 7) return 'Toyota / Isuzu 3T - 7T Diesel Industrial Forklift';
-      if (tonnage <= 15) return 'TCM / Kalmar 10T - 15T Heavy Duty Industrial Forklift';
-      return 'Kalmar / Caterpillar 20T - 32T Heavy Container Forklift';
+      if (tonnage <= 7) return 'Toyota / Isuzu 3T - 7T Forklift Industri Diesel';
+      if (tonnage <= 15) return 'TCM / Kalmar 10T - 15T Forklift Industri Heavy Duty';
+      return 'Kalmar / Caterpillar 20T - 32T Forklift Kontainer Heavy Duty';
     } else if (equipmentType === 'boom') {
-      return 'Genie / JLG 26m - 43m Rough Terrain Articulating Boom Lift (4x4)';
+      return 'Genie / JLG 26m - 43m Boom Lift Articulating Medan Kasar (4x4)';
     } else {
-      return 'Kalmar / Sany 45 Ton Container Reach Stacker (5-High Stacking)';
+      return 'Kalmar / Sany 45 Ton Container Reach Stacker (Stacking 5 Tingkat)';
     }
   };
 
   const handleApplyToForm = () => {
-    const quoteForm = document.getElementById('quote-form');
-    if (quoteForm) {
-      quoteForm.scrollIntoView({ behavior: 'smooth' });
-      // Dispatch custom event to auto-select form category
-      const selectElement = document.getElementById('equipment_category') as HTMLSelectElement;
-      if (selectElement) {
-        selectElement.value = equipmentType === 'crane' 
-          ? 'Mobile & All-Terrain Cranes' 
-          : equipmentType === 'forklift'
-          ? 'Heavy Industrial Forklifts'
-          : equipmentType === 'boom'
-          ? 'Boom Lifts & Aerial Platforms'
-          : 'Reach Stackers & Port Handlers';
-      }
-    }
+    const durText = duration === 'daily' ? 'Shift Harian' : duration === 'weekly' ? 'Mingguan' : 'Kontrak Bulanan';
+    const opText = includeOperator ? 'Dengan Operator SIO & Tim Rigging' : 'Lepas Kunci (Dry Lease)';
+    const msg = `Halo PT. Atlas Teknindo Lestari, saya telah membuat estimasi sewa untuk: ${getRecommendation()} (Kapasitas: ${tonnage} Ton, Durasi: ${durText}, ${opText}). Mohon info ketersediaan unit dan penawaran resminya.`;
+    window.open(`https://wa.me/6288888888888?text=${encodeURIComponent(msg)}`, '_blank');
   };
 
   return (
@@ -59,20 +48,20 @@ export default function RentalEstimatorSection() {
               <div>
                 <div className="inline-flex items-center gap-2 text-[#D97706] text-xs font-bold uppercase tracking-wider mb-2">
                   <Calculator className="w-4 h-4" />
-                  Interactive Fleet Spec Matcher
+                  Kalkulator Estimasi Spesifikasi Unit
                 </div>
                 <h3 className="text-2xl sm:text-4xl font-extrabold uppercase font-heading text-slate-900 tracking-wide">
-                  QUICK RENTAL SPEC ESTIMATOR
+                  ESTIMASI SPESIFIKASI SEWA
                 </h3>
                 <p className="text-slate-600 text-sm mt-1">
-                  Select your project payload parameters to match the optimal heavy equipment unit & deployment plan.
+                  Pilih parameter beban proyek Anda untuk mendapatkan rekomendasi unit alat berat dan rencana operasional yang optimal.
                 </p>
               </div>
 
               {/* Step 1: Equipment Category */}
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-wider text-slate-700">
-                  1. Select Equipment Machinery Category
+                  1. Pilih Kategori Alat Berat
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   {[
@@ -100,8 +89,8 @@ export default function RentalEstimatorSection() {
               {/* Step 2: Estimated Tonnage / Payload slider */}
               <div className="space-y-2">
                 <div className="flex justify-between items-center text-xs font-bold uppercase tracking-wider text-slate-700">
-                  <span>2. Target Capacity / Payload Weight</span>
-                  <span className="text-[#D97706] font-mono text-base font-extrabold">{tonnage} Tons</span>
+                  <span>2. Target Kapasitas / Beban Angkat</span>
+                  <span className="text-[#D97706] font-mono text-base font-extrabold">{tonnage} Ton</span>
                 </div>
                 <input
                   type="range"
@@ -113,23 +102,23 @@ export default function RentalEstimatorSection() {
                   className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#D97706]"
                 />
                 <div className="flex justify-between text-[11px] text-slate-500 font-mono">
-                  <span>5T Light</span>
-                  <span>50T Medium</span>
-                  <span>100T Heavy</span>
-                  <span>150T Extra Heavy</span>
+                  <span>5T Ringan</span>
+                  <span>50T Sedang</span>
+                  <span>100T Berat</span>
+                  <span>150T Ekstra Berat</span>
                 </div>
               </div>
 
               {/* Step 3: Contract Type */}
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-wider text-slate-700">
-                  3. Planned Rental Duration
+                  3. Rencana Durasi Sewa
                 </label>
                 <div className="grid grid-cols-3 gap-3">
                   {[
-                    { id: 'daily', label: 'Daily Shift' },
-                    { id: 'weekly', label: 'Weekly' },
-                    { id: 'monthly', label: 'Monthly Contract' },
+                    { id: 'daily', label: 'Shift Harian' },
+                    { id: 'weekly', label: 'Mingguan' },
+                    { id: 'monthly', label: 'Kontrak Bulanan' },
                   ].map((dur) => (
                     <button
                       key={dur.id}
@@ -157,7 +146,7 @@ export default function RentalEstimatorSection() {
                   className="w-4 h-4 rounded bg-white border-slate-300 text-[#D97706] focus:ring-[#D97706]"
                 />
                 <label htmlFor="includeOperator" className="text-xs font-medium text-slate-700 cursor-pointer">
-                  Include SIO Certified Operator & Rigging Crew
+                  Termasuk Operator Tersertifikasi SIO & Tim Rigging
                 </label>
               </div>
 
@@ -167,15 +156,15 @@ export default function RentalEstimatorSection() {
             <div className="lg:col-span-5 bg-[#F8FAFC] p-6 lg:p-8 rounded-xl border border-slate-200 space-y-6 flex flex-col justify-between h-full">
               <div>
                 <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-slate-500 mb-4 border-b border-slate-200 pb-3">
-                  <span>Recommended Fleet Configuration</span>
+                  <span>Konfigurasi Armada Direkomendasikan</span>
                   <span className="text-[#D97706] flex items-center gap-1">
-                    <Sparkles className="w-3.5 h-3.5" /> High Match
+                    <Sparkles className="w-3.5 h-3.5" /> Rekomendasi Terbaik
                   </span>
                 </div>
 
                 <div className="p-4 bg-amber-50 rounded-lg border border-amber-300 mb-6">
                   <div className="text-xs text-[#D97706] uppercase font-bold tracking-wider mb-1">
-                    Recommended Model
+                    Model Direkomendasikan
                   </div>
                   <div className="text-lg font-bold font-heading text-slate-900 uppercase leading-snug">
                     {getRecommendation()}
@@ -184,17 +173,19 @@ export default function RentalEstimatorSection() {
 
                 <div className="space-y-2 text-xs text-slate-700">
                   <div className="flex items-center justify-between py-1 border-b border-slate-200">
-                    <span className="text-slate-500">Selected Tonnage:</span>
-                    <span className="font-mono text-slate-900 font-bold">{tonnage} Tons</span>
+                    <span className="text-slate-500">Kapasitas Dipilih:</span>
+                    <span className="font-mono text-slate-900 font-bold">{tonnage} Ton</span>
                   </div>
                   <div className="flex items-center justify-between py-1 border-b border-slate-200">
-                    <span className="text-slate-500">Duration Term:</span>
-                    <span className="capitalize font-semibold text-slate-800">{duration}</span>
+                    <span className="text-slate-500">Durasi Kontrak:</span>
+                    <span className="capitalize font-semibold text-slate-800">
+                      {duration === 'daily' ? 'Shift Harian' : duration === 'weekly' ? 'Mingguan' : 'Kontrak Bulanan'}
+                    </span>
                   </div>
                   <div className="flex items-center justify-between py-1 border-b border-slate-200">
-                    <span className="text-slate-500">Crew Support:</span>
+                    <span className="text-slate-500">Dukungan Crew:</span>
                     <span className="text-emerald-700 font-semibold flex items-center gap-1">
-                      <ShieldCheck className="w-3.5 h-3.5" /> {includeOperator ? 'Certified SIO Included' : 'Dry Lease'}
+                      <ShieldCheck className="w-3.5 h-3.5" /> {includeOperator ? 'Termasuk Operator SIO' : 'Lepas Kunci (Dry Lease)'}
                     </span>
                   </div>
                 </div>
@@ -206,7 +197,7 @@ export default function RentalEstimatorSection() {
                   onClick={handleApplyToForm}
                   className="btn-yellow w-full py-3.5 text-xs flex items-center justify-center gap-2"
                 >
-                  <span>Apply Selection To Quote Form</span>
+                  <span>Terapkan Estimasi ke Pesan WhatsApp</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>

@@ -15,14 +15,14 @@ export default function WhyChooseUsSection() {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 text-[#D97706] text-xs font-bold uppercase tracking-widest px-3 py-1 bg-white rounded border border-slate-200 shadow-sm">
             <Flame className="w-3.5 h-3.5" />
-            Uncompromising Operational Standards
+            Standar Operasional Tanpa Kompromi
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold uppercase font-heading text-slate-900 tracking-wide leading-tight">
-            WHY LEADING INDUSTRIES CHOOSE <br className="hidden sm:inline" />
+            ALASAN INDUSTRI TERKEMUKA MEMILIH <br className="hidden sm:inline" />
             <span className="text-[#D97706]">ATLAS TEKNINDO LESTARI</span>
           </h2>
           <p className="text-slate-600 text-base">
-            Heavy lifting carries zero room for error. We combine state-of-the-art machinery with certified personnel to keep your site safe, efficient, and on schedule.
+            Pekerjaan heavy lifting tidak memiliki ruang untuk kesalahan. Kami menggabungkan armada canggih dengan personel berpengalaman untuk menjaga lokasi kerja Anda tetap aman, efisien, dan sesuai jadwal.
           </p>
         </div>
 
@@ -35,27 +35,27 @@ export default function WhyChooseUsSection() {
               <div className="w-14 h-14 bg-amber-100 border border-amber-300 rounded-xl flex items-center justify-center text-[#D97706] mb-6 group-hover:bg-[#FFB800] group-hover:text-[#0F141C] transition-colors">
                 <UserCheck className="w-7 h-7 stroke-[2]" />
               </div>
-              <div className="text-xs font-bold uppercase tracking-wider text-[#D97706] mb-1">Pillar 01</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-[#D97706] mb-1">Pilar 01</div>
               <h3 className="text-2xl font-bold uppercase font-heading text-slate-900 tracking-wide mb-3">
-                CERTIFIED SIO OPERATORS
+                OPERATOR TERSERTIFIKASI SIO
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                Every equipment deployment comes backed by experienced, fully certified operators holding valid SIO (Surat Izin Operator) licenses from Depnaker and MIGAS.
+                Setiap pengoperasian unit didukung oleh operator berpengalaman yang memiliki lisensi SIO (Surat Izin Operator) resmi dari Depnaker dan MIGAS.
               </p>
             </div>
 
             <ul className="space-y-2.5 pt-4 border-t border-slate-200 text-xs text-slate-700 font-medium">
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#D97706] shrink-0" />
-                <span>100% Depnaker K3 Safety Certified</span>
+                <span>100% Tersertifikasi Keselamatan K3 Depnaker</span>
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#D97706] shrink-0" />
-                <span>Rigorous Pre-Job Safety Briefing (Toolbox Talks)</span>
+                <span>Briefing Keselamatan Sebelum Kerja (Toolbox Talk)</span>
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#D97706] shrink-0" />
-                <span>Zero Accident Record Mindset</span>
+                <span>Pola Pikir Tanpa Kecelakaan (Zero Accident)</span>
               </li>
             </ul>
           </div>
@@ -66,27 +66,27 @@ export default function WhyChooseUsSection() {
               <div className="w-14 h-14 bg-amber-100 border border-amber-300 rounded-xl flex items-center justify-center text-[#D97706] mb-6 group-hover:bg-[#FFB800] group-hover:text-[#0F141C] transition-colors">
                 <ShieldAlert className="w-7 h-7 stroke-[2]" />
               </div>
-              <div className="text-xs font-bold uppercase tracking-wider text-[#D97706] mb-1">Pillar 02</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-[#D97706] mb-1">Pilar 02</div>
               <h3 className="text-2xl font-bold uppercase font-heading text-slate-900 tracking-wide mb-3">
-                RIGOROUSLY MAINTAINED FLEET
+                ARMADA TERAWAT SECARA KETAT
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                Our machinery undergoes mandatory 50-point inspection before every deployment. We enforce OEM scheduled maintenance to prevent unexpected downtime on your job site.
+                Peralatan kami melalui inspeksi 50 poin sebelum dikirim ke lokasi. Kami menerapkan perawatan berkala standar OEM untuk mencegah kendala teknis di lapangan.
               </p>
             </div>
 
             <ul className="space-y-2.5 pt-4 border-t border-slate-200 text-xs text-slate-700 font-medium">
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#D97706] shrink-0" />
-                <span>Genuine OEM Spare Parts Guarantee</span>
+                <span>Jaminan Suku Cadang Asli OEM</span>
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#D97706] shrink-0" />
-                <span>Annual SILO Inspection & NDT Testing</span>
+                <span>Inspeksi SILO Tahunan & Pengujian NDT</span>
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#D97706] shrink-0" />
-                <span>99.8% Proven Fleet Uptime</span>
+                <span>Tingkat Kesiapan Alat Hingga 99.8%</span>
               </li>
             </ul>
           </div>
@@ -97,27 +97,27 @@ export default function WhyChooseUsSection() {
               <div className="w-14 h-14 bg-amber-100 border border-amber-300 rounded-xl flex items-center justify-center text-[#D97706] mb-6 group-hover:bg-[#FFB800] group-hover:text-[#0F141C] transition-colors">
                 <Clock className="w-7 h-7 stroke-[2]" />
               </div>
-              <div className="text-xs font-bold uppercase tracking-wider text-[#D97706] mb-1">Pillar 03</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-[#D97706] mb-1">Pilar 03</div>
               <h3 className="text-2xl font-bold uppercase font-heading text-slate-900 tracking-wide mb-3">
-                24/7 ON-SITE SUPPORT
+                DUKUNGAN TEKNIS 24/7 DI LOKASI
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                Projects run around the clock, and so do we. Mobile service units and master technicians stand ready for immediate dispatch across Java, Sumatra, and outer islands.
+                Proyek Anda berjalan terus, dan begitu pula layanan kami. Unit servis bergerak dan teknisi ahli kami siap dikirim dengan cepat ke Jawa, Sumatra, dan seluruh Indonesia.
               </p>
             </div>
 
             <ul className="space-y-2.5 pt-4 border-t border-slate-200 text-xs text-slate-700 font-medium">
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#D97706] shrink-0" />
-                <span>Dedicated Heavy Transport Lowbed Fleet</span>
+                <span>Armada Transportasi Heavy Lowbed Sendiri</span>
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#D97706] shrink-0" />
-                <span>On-Site Mobile Mechanical Vans</span>
+                <span>Mobil Servis Mekanik Bergerak Siaga</span>
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#D97706] shrink-0" />
-                <span>Immediate Replacement Guarantee</span>
+                <span>Garansi Penggantian Unit Cepat</span>
               </li>
             </ul>
           </div>

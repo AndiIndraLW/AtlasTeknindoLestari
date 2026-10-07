@@ -4,9 +4,9 @@ import React from 'react';
 import { MessageCircle } from 'lucide-react';
 
 export default function FloatingWhatsApp() {
-  const whatsappNumber = '6281234567890'; // Representative WhatsApp Business line
+  const whatsappNumber = '6288888888888'; // Representative WhatsApp Business line
   const whatsappMessage = encodeURIComponent(
-    'Hello PT. Atlas Teknindo Lestari, I am interested in inquiring about equipment rental quotes and availability.'
+    'Halo PT. Atlas Teknindo Lestari, saya tertarik untuk meminta penawaran sewa alat berat dan informasi ketersediaan unit.'
   );
 
   return (
@@ -25,7 +25,7 @@ export default function FloatingWhatsApp() {
         </span>
       </div>
       <span className="hidden sm:inline-block text-sm font-semibold tracking-wide pr-1">
-        24/7 Rental Hotline
+        Hotline Sewa 24/7
       </span>
     </a>
   );

@@ -18,17 +18,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'PT. Atlas Teknindo Lestari | Heavy Lifting & Material Handling Equipment Rental',
-  description: 'Leading heavy lifting and material handling equipment rental in Indonesia. Premium fleet of mobile cranes, forklifts, boom lifts, scissor lifts, and reach stackers with certified K3 operators.',
+  title: 'PT. Atlas Teknindo Lestari | Sewa Alat Berat & Material Handling',
+  description: 'Penyedia sewa alat berat dan material handling terkemuka di Indonesia. Armada berkualitas: mobile crane, forklift, boom lift, scissor lift, dan reach stacker dengan operator tersertifikasi K3.',
   keywords: [
     'PT Atlas Teknindo Lestari',
-    'heavy equipment rental',
-    'mobile crane rental Indonesia',
-    'industrial forklift rental',
-    'boom lift rental',
-    'scissor lift rental',
-    'reach stacker rental',
-    'K3 certified operator',
+    'sewa alat berat',
+    'sewa mobile crane Indonesia',
+    'sewa forklift industri',
+    'sewa boom lift',
+    'sewa scissor lift',
+    'sewa reach stacker',
+    'operator sertifikasi K3',
   ],
 };
 
@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${barlowCondensed.variable} ${inter.variable} scroll-smooth`}>
+    <html lang="id" className={`${barlowCondensed.variable} ${inter.variable} scroll-smooth`}>
       <body className="min-h-screen flex flex-col bg-[#F8FAFC] text-slate-900 font-sans antialiased selection:bg-[#FFB800] selection:text-black">
         <Navbar />
         <main className="flex-grow">{children}</main>
